@@ -1,0 +1,279 @@
+@font-face {
+  font-family: 'japani';
+  src: url(/assets/REVOKA-PERSONALUSE.otf);
+}
+
+:root {
+
+  --ff-comic: 'Bangers', Arial, serif;
+  --ff-text: 'Sawarabi Mincho', Verdana, serif;
+  --ff-japani: 'japani', monospace, sans-serif;
+}
+
+/* utilities */
+
+.remove-bg {
+  filter: brightness(1.1);
+  mix-blend-mode: multiply;
+}
+
+div.granite {
+  background-image: url(/img/bg-imgs/granite.png);
+  background-repeat: repeat;
+}
+
+div#audio-controls {
+  float: left;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+div#audio-controls>button {
+
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 50%;
+  color: #fff;
+  background: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 20px;
+  text-align: center;
+  transition-duration: .15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
+#audio-controls>button:hover {
+  color: #000;
+  background: rgb(255, 218, 87);
+}
+
+/* general set */
+
+body {
+  font-family: var(--ff-text);
+  color: white;
+  font-size: 16px;
+}
+
+/* main first */
+
+main.section-one {
+  background-image: url(../img/bg-imgs/background-main-min.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+
+}
+
+main.section-one>div:first-child {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 10% 80%;
+}
+
+@media (min-width: 1400px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  main.section-one>div:first-child {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10% 80%;
+  }
+
+  .main-article h1 {
+    font-size: 5rem !important;
+  }
+
+  b.invincible {
+    font-size: 2rem;
+  }
+}
+
+header {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 3;
+  padding: 1rem 1rem;
+  padding-bottom: 0;
+}
+
+header>div {
+  display: flex;
+}
+
+div.logo {
+  display: flex;
+  align-items: center;
+  font-family: var(--ff-japani);
+  letter-spacing: 2px;
+  font-size: 3rem;
+}
+
+div.logo>img {
+  width: 5.7rem;
+  padding-right: 2rem;
+}
+
+div.logo span.logo-letter {
+  background-image: linear-gradient(175deg, #d69432, black);
+  color: transparent;
+  /* background-clip is what does the heavy lifting here */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px white;
+}
+
+ul.nav {
+  font-family: var(--ff-comic);
+  letter-spacing: 2px;
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+  align-items: center;
+}
+
+ul.nav li {
+  list-style: none;
+  color: #d69432;
+  font-size: 2rem;
+}
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: #d69432;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #3c352b;
+  border-radius: 1rem;
+}
+
+.hover-brown:hover {
+  background-color: #3c352b;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgb(255, 215, 35);
+  transition: box-shadow .5s;
+}
+
+.hover-brown>a {
+  display: inline-block;
+  height: fit-content;
+  width: fit-content;
+  text-decoration: none;
+
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 1rem;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #d69432;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+div.main-article {
+  grid-row: 2 / 3;
+  grid-column: 2/3;
+  display: flex;
+  width: 80%;
+  margin: 4rem auto;
+  margin-bottom: 0;
+  gap: 4rem;
+}
+
+.main-article * h1 {
+  font-family: "japani";
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 3rem;
+
+  background-image: linear-gradient(175deg, #d69432, white);
+  color: transparent;
+  /* background-clip is what does the heavy lifting here */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px black;
+}
+
+
+header+div>article {
+  width: 60%;
+}
+
+.main-article p {
+  background-color: hsla(328, 0%, 0%, 0.7);
+  border-radius: .4rem;
+}
+
+.invincible {
+  display: inline-block;
+  padding: 1rem 0;
+  padding-left: 5rem;
+  font-size: 1.5rem;
+  color: #d69432;
+}
+
+.p-gallery {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.p-gallery>p:hover {
+  box-shadow: 0 0 15px rgb(255, 215, 35);
+  transition: box-shadow .5s;
+  cursor: pointer;
+}
+
+.p-gallery>p {
+  display: inline;
+  border: 1px solid #d69432;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+header+div>div.main-img {
+  width: 60%;
+}
+
+div.main-img {
+  margin: auto 0;
+  padding: 1rem;
+  outline: .4rem outset #d69432;
+}
+
+/* Section two */
