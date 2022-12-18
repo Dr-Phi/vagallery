@@ -17,6 +17,10 @@
   mix-blend-mode: multiply;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 div.granite {
   background-image: url(/img/bg-imgs/granite.png);
   background-repeat: repeat;
@@ -277,3 +281,316 @@ div.main-img {
 }
 
 /* Section two */
+
+main.section-two {
+  background-image: url(../img/bg-imgs/bg2.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+main.section-two {
+  color: black;
+  font-size: 2rem;
+
+}
+
+main.section-two>div:first-child {
+  width: 90%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 25% 60% 15%;
+  grid-template-rows: 32% 68%;
+  text-align: center;
+
+}
+
+main.section-two article {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+main.section-two h1 {
+  margin-bottom: 2rem;
+}
+
+/* gallery */
+
+main.gallery-one {
+  background-image: url(../img/bg-imgs/bg3.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  color: black;
+  display: flex;
+  justify-content: right;
+}
+
+main.gallery-one>div {
+  width: 96%;
+  height: 96%;
+  display: grid;
+  grid-template-columns: 29% auto auto 10%;
+  grid-template-rows: 40% auto auto;
+  gap: 1rem;
+  align-content: center;
+
+}
+
+main.gallery-one p {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  align-self: center;
+
+}
+
+main.gallery-one img {
+  border: 5px solid black;
+}
+
+main.gallery-one>div img:first-of-type {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img2 {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  align-self: end;
+
+}
+
+.img3 {
+  grid-row-start: 1;
+  grid-column-start: 3;
+  grid-row-end: 3;
+  align-self: center;
+}
+
+main.gallery-two>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.middle {
+  opacity: .6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+main.gallery-two>div img:first-child {
+  border-radius: 50% 0 0 50%;
+  height: 100vh;
+}
+
+main.gallery-two>div img:first-child+img {
+  border-radius: 0 50% 50% 0;
+  height: 100vh;
+}
+
+main.gallery-three {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/bg-imgs/tree-right.jpg);
+  background-size: cover;
+  justify-content: center;
+}
+
+main.gallery-three>div {
+  width: 97%;
+  height: 97%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 60% auto;
+}
+
+main.gallery-three>div img:first-child {
+  border: .8rem solid black;
+  width: 100%;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+main.gallery-three>div img:first-child+img {
+  grid-column-start: 3;
+  grid-row-start: 2;
+  height: auto;
+  align-self: end;
+  border-bottom: 2rem solid black;
+}
+
+main.gallery-three>div p {
+  color: black;
+  font-family: var(--ff-comic);
+  grid-column-start: 3;
+  grid-row-start: 2;
+  align-self: start;
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+
+main.gallery-four {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/wallpaper.png);
+  background-size: cover;
+  letter-spacing: 1.1px;
+}
+
+main.gallery-four>div {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--ff-comic);
+  display: grid;
+  grid-template-columns: 25% auto;
+  grid-template-rows: 28% auto;
+}
+
+
+main.gallery-four p {
+  color: white;
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+main.gallery-four img {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-column-end: 3;
+  height: 80%;
+  width: auto;
+  border: 4px solid black;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+main.gallery-four q {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-self: end;
+  font-size: 3ch;
+  padding-right: 4rem;
+  padding-top: 9%;
+}
+
+main.gallery-five>div {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-auto-flow: row;
+}
+
+main.gallery-five {
+  background-image: url(../img/bg-imgs/sakura.png);
+  background-size: 34%;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-color: #f7f7f7;
+}
+
+main.gallery-five>div img {
+  border: .5rem solid black;
+}
+
+.mosaico {
+  color: black;
+  font-family: var(--ff-japani);
+  text-align: center;
+  letter-spacing: 1.1px;
+}
+
+main.gallery-six {
+  background-color: #fefefe;
+  background-image: url(../img/infinite.jpg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 60% 10%;
+}
+
+main.gallery-six>div {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  height: 100vh;
+  width: 100vw;
+}
+
+main.gallery-six>div img {
+  height: auto;
+  width: 50%;
+}
+
+.right-white {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  justify-self: end;
+  height: 100vh !important;
+  width: 20vw !important;
+}
+
+main.gallery-seven {
+  background-color: #fdfdfd;
+  background-image: url(../img/sekishusai-min.png);
+  background-repeat: no-repeat;
+  background-position: 40% 0;
+  background-size: 69%;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+main.gallery-seven img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+}
+
+main.gallery-seven div {
+  display: inline-block;
+  border: 4px solid #0a0a0a;
+  background-color: #0a0a0a;
+  color: #cfcfcf;
+  font-size: 1.9rem;
+  z-index: 99;
+  position: absolute;
+  bottom: 0;
+  right: 4px;
+  cursor: pointer;
+}
+
+main.gallery-seven div>a {
+  text-decoration: none;
+  display: inline-block;
+  height: 100%;
+  width: fit-content;
+  padding: 3% 3%;
+  text-align: center;
+}
+
+main.gallery-seven div>a:visited {
+  text-decoration: none;
+  color: #cfcfcf;
+}
+
+
+main.gallery-seven div:hover {
+  border: 4px double#d69432;
+}
